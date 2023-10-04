@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a button type="submit" class="btn btn-primary" href="{% url 'logout' %}">Logout!</a>
+<a button type="submit" class="btn btn-primary" href="{% url 'create' %}">Create!</a>
+<a button type="submit" class="btn btn-primary" href="{% url 'view' %}">View!</a>
+
+
+
+{% endblock %}

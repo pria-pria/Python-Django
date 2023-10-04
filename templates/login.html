@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'login' %}">Go back!!</a>
+
+<h2>Do login first!</h2>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="email"></label><br>
+    <input type="email" name="email" placeholder="Email"><br>
+
+    <label for="password"></label><br>
+    <input type="password" name="password" placeholder="Password"><br>
+
+    <hr>
+
+    <button type="submit" class="btn btn-primary">Login!</button>
+
+    <a href="{% url 'signup' %}">Don't have an account?!</a>
+</form>
+
+{% endblock %}

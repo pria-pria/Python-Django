@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="{% url 'login' %}">Go back!!</a>
+
+<a href="{% url 'view' %}">Go back!!</a>
+
+<h2>Do Create!</h2>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="title">Title</label><br>
+    <input type="text" name="title" required><br>
+
+    <label for="content">content</label><br>
+    <input type="text" name="content"required><br>
+
+    <label for="author">Author</label><br>
+    <input type="text" name="author" required><br>
+
+    <hr>
+
+    <button type="submit" class="btn btn-primary" >Create!</button>
+
+</form>
+
+{% endblock %}

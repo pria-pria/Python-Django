@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Signup!</h2>
+<hr>
+<a href="{% url 'login' %}">Go back!!</a>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="email"></label><br>
+    <input type="email" name="email" placeholder="Email"><br>
+
+    <label for="username"></label><br>
+    <input type="text" name="username" placeholder="Username"><br>
+
+    <label for="password"></label><br>
+    <input type="password" name="password" placeholder="Password"><br>
+
+    <label for="repass"></label><br>
+    <input type="password" name="repass" placeholder="Re-enter Password"><br>
+
+    <hr>
+    <button type="submit" class="btn btn-primary" >Signup!</button>
+
+    <a href="{% url 'login' %}">Already a User?!</a>
+</form>
+
+{% endblock %}
